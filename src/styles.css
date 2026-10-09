@@ -125,7 +125,9 @@ kbd { border: 1px solid #777; border-radius: 3px; padding: .05rem .3rem; box-sha
 .process-finish .bubble { right: 8%; top: 14%; }
 
 .page-sample { display: grid; grid-template-rows: 1.3fr .85fr .36fr; gap: 2.2%; }
-.sample-scene .sample-source { right: 4%; top: 12%; max-width: 45%; }
+.sample-scene { margin: 0; background: #111; }
+.sample-scene img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 16%; filter: grayscale(1) contrast(1.08); }
+.sample-scene figcaption { right: 3%; bottom: 3%; }
 .sample-result { padding: 5%; background: white; }
 .sample-result blockquote { margin: .35rem 0; font-size: clamp(1rem, 2.4vw, 1.8rem); font-weight: 800; }
 .sample-result p { margin: 0; font: 600 clamp(.52rem, .9vw, .7rem)/1.3 ui-sans-serif, sans-serif; }

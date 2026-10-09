@@ -14,8 +14,8 @@ const pageTemplates = [
       </div>
       <div class="panel panel--strip">
         <div class="speed-lines" aria-hidden="true"></div>
-        <div class="narration">Meet <strong>[Translator name]</strong></div>
-        <p class="caption">Manga translator · cultural bridge · dialogue obsessive</p>
+        <div class="narration">Meet <strong>Gemma</strong></div>
+        <p class="caption">Online as @Chii_reader · manga translator</p>
       </div>
       <span class="folio">1</span>
     </article>`,
@@ -82,19 +82,19 @@ const pageTemplates = [
       <span class="folio">5</span>
     </article>`,
   () => `
-    <article class="manga-page page-sample" aria-label="Page 6: Translation sample">
-      <div class="panel sample-scene art-panel" role="img" aria-label="A commuter looking through a train window" style="--art: url('${asset("train-scene.svg")}')">
-        <div class="narration">SAMPLE · PLACEHOLDER</div>
-        <p class="bubble bubble--normal sample-source">「[Approved source line]」</p>
-      </div>
+    <article class="manga-page page-sample" aria-label="Page 6: From Chii reader's public feed">
+      <figure class="panel sample-scene">
+        <img src="https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=small" srcset="https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=small 493w, https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=large 847w" sizes="(min-width: 760px) 42vw, 88vw" alt="A Spanish-lettered manga excerpt shared by @Chii_reader: two schoolgirls react to an unexpected close encounter" loading="lazy" referrerpolicy="no-referrer" />
+        <figcaption class="narration">FROM @CHII_READER’S PUBLIC FEED</figcaption>
+      </figure>
       <div class="panel sample-result">
-        <span class="panel-kicker">TRANSLATION</span>
-        <blockquote>“[Approved translated line]”</blockquote>
-        <p>Context note: [Explain one real translation decision concisely.]</p>
+        <span class="panel-kicker">WHY MANGA NEEDS A HUMAN VOICE</span>
+        <blockquote>Timing. Tone. Space. Character.</blockquote>
+        <p>A single bubble has to carry them all. This public-feed image illustrates the medium; no publication credit is claimed.</p>
       </div>
       <div class="panel sample-link">
-        <strong>Want the full case study?</strong>
-        <a href="#text-resume">View portfolio details →</a>
+        <strong>READ WITH CHII</strong>
+        <a href="https://x.com/Chii_reader" target="_blank" rel="noreferrer">Follow @Chii_reader →</a>
       </div>
       <span class="folio">6</span>
     </article>`,
@@ -107,7 +107,7 @@ function coverTemplate(side: "front" | "back", face: "inside" | "outside") {
         <p class="cover-kicker">A manga résumé</p>
         <h2><span>The Translator</span><strong>Between<br />Panels</strong></h2>
         <div class="cover-portrait" aria-hidden="true"><span></span></div>
-        <p class="cover-byline">[Translator name]<br /><small>[Language pair]</small></p>
+        <p class="cover-byline">GEMMA<br /><small>@CHII_READER</small></p>
         <p class="cover-edition">PORTFOLIO EDITION · 01</p>
       </article>`;
   }
@@ -117,11 +117,10 @@ function coverTemplate(side: "front" | "back", face: "inside" | "outside") {
       <article class="manga-page cover cover--back" aria-label="Back cover with contact information">
         <div class="back-mark" aria-hidden="true">終</div>
         <p class="eyebrow">Let’s make every voice land.</p>
-        <h2>[Translator name]</h2>
-        <p>Manga translation · localization · cultural consultation</p>
-        <a href="mailto:translator@example.com">translator@example.com</a>
-        <a href="#">[Professional profile]</a>
-        <small>Contact details are placeholders.</small>
+        <h2>Gemma · @Chii_reader</h2>
+        <p>Manga translator · reader · @Chii_reader</p>
+        <a href="https://x.com/Chii_reader" target="_blank" rel="noreferrer">x.com/Chii_reader</a>
+        <small>Add a professional email before final publication.</small>
       </article>`;
   }
 
@@ -177,7 +176,7 @@ function createBook(singlePage: boolean, position = -2) {
     shadow: 0.58,
     gutter: 0.42,
     lift: 36,
-    label: "The Translator Between Panels, an interactive manga résumé",
+    label: "Gemma, also known as Chii reader — an interactive manga résumé",
     reducedMotion: "auto",
     render(slot, page) {
       slot.innerHTML = renderPage(page, singlePage);
