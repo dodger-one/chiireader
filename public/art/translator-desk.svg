@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Translator working at a desk</title><desc id="desc">Black and white manga-style illustration of a translator reading pages beneath a desk lamp.</desc>
+  <defs><pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#111"/></pattern></defs>
+  <rect width="800" height="900" fill="#eee9dd"/><path d="M0 0h800v330H0z" fill="url(#dots)" opacity=".55"/>
+  <path d="M80 700h650M130 700l-45 200M665 700l50 200" stroke="#111" stroke-width="18"/>
+  <path d="M560 110h150l-60 210H515z" fill="#111"/><path d="M580 280c-90 30-150 90-180 180" fill="none" stroke="#111" stroke-width="16"/>
+  <ellipse cx="390" cy="410" rx="122" ry="145" fill="#f8f4e9" stroke="#111" stroke-width="16"/>
+  <path d="M270 410c-10-150 50-235 145-225 105 10 150 95 105 220-20-110-95-102-130-174-24 70-70 120-120 179z" fill="#111"/>
+  <path d="M350 430l25 5m75-5 28-6M384 494c22 13 44 12 65-2" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M220 700c20-170 95-230 183-228 110 1 205 73 223 228z" fill="#181818"/>
+  <path d="M165 620l215 20-18 110-220-18zM440 620l210-30 20 115-215 32z" fill="#faf6ea" stroke="#111" stroke-width="11"/>
+  <path d="M185 650l140 12m-130 28 110 9m166-57 130-19m-120 58 150-22" stroke="#111" stroke-width="6"/>
+</svg>

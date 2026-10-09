@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">Commuter at a train window</title><desc id="desc">Black and white manga-style commuter watching a city pass outside a train.</desc>
+  <defs><pattern id="half" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1"/></pattern></defs>
+  <rect width="1000" height="650" fill="#eee9de"/><rect x="50" y="55" width="580" height="460" fill="#fff" stroke="#111" stroke-width="20"/>
+  <path d="M70 390l110-100 95 75 130-160 205 185v105H70z" fill="url(#half)"/><path d="M70 430h540M180 290v140m225-225v225" stroke="#111" stroke-width="10"/>
+  <path d="M0 525h1000M665 0v650" stroke="#111" stroke-width="24"/>
+  <ellipse cx="790" cy="260" rx="95" ry="120" fill="#f7f2e7" stroke="#111" stroke-width="14"/><path d="M700 270c-12-130 55-190 128-170 86 22 102 103 57 185-10-85-55-100-92-150-18 69-52 112-93 135z" fill="#111"/>
+  <path d="M645 650c12-210 90-275 170-274 94 1 165 72 185 274z" fill="#171717"/><path d="M735 278l22 3m68-2 23-5m-80 68c19 11 39 9 56-4" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+  <path d="M0 80h640M0 110h640M0 540h640" stroke="#111" stroke-width="5" opacity=".3"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Manga page with translation notes</title><desc id="desc">Monochrome close-up of marked-up manga panels and handwritten editing notes.</desc>
+  <defs><pattern id="tone" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4"/></pattern></defs>
+  <rect width="800" height="1100" fill="#dcd7cb"/><g transform="rotate(-7 400 550)">
+    <rect x="85" y="70" width="650" height="950" fill="#faf7ee" stroke="#111" stroke-width="18"/>
+    <path d="M110 100h360v380H110zM490 100h220v380H490zM110 505h600v480H110z" fill="none" stroke="#111" stroke-width="12"/>
+    <path d="M110 100h360v380H110z" fill="url(#tone)" opacity=".4"/>
+    <ellipse cx="315" cy="310" rx="100" ry="125" fill="#fff" stroke="#111" stroke-width="10"/><path d="M220 300c5-140 170-180 200-20-70-70-120-10-200 20z"/>
+    <ellipse cx="590" cy="225" rx="75" ry="105" fill="#fff" stroke="#111" stroke-width="9"/><path d="M525 205c20-120 140-100 145 15-55-60-95-20-145-15z"/>
+    <path d="M160 580h250m-240 45h330m-320 45h210m-220 150h430m-420 45h355" stroke="#111" stroke-width="10"/>
+    <g fill="#fff" stroke="#111" stroke-width="8"><ellipse cx="355" cy="170" rx="90" ry="48"/><ellipse cx="585" cy="410" rx="85" ry="48"/><ellipse cx="545" cy="745" rx="120" ry="70"/></g>
+  </g><path d="M25 170l120 35M40 210l90 24M625 950l130-80M650 990l110-55" stroke="#b52025" stroke-width="12"/>
+</svg>
