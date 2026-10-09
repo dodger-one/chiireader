@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#171614" />
+    <meta name="description" content="An interactive manga-style résumé prototype for a professional translator." />
+    <title>The Translator Between Panels — Manga Résumé Prototype</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#text-resume">Skip to the text résumé</a>
+
+    <main class="reader-shell">
+      <header class="reader-header">
+        <p class="eyebrow">Interactive manga résumé · prototype</p>
+        <div class="header-actions" aria-label="Reader options">
+          <button id="help-button" class="text-button" type="button" aria-expanded="false" aria-controls="reading-help">
+            How to read
+          </button>
+          <button id="zoom-button" class="text-button" type="button" aria-pressed="false">
+            Enlarge
+          </button>
+          <a class="text-button" href="#text-resume">Text version</a>
+        </div>
+      </header>
+
+      <p id="reading-help" class="reading-help" hidden>
+        This book follows Japanese reading direction. Drag the left edge toward the right, swipe, or use <kbd>←</kbd> to continue.
+      </p>
+
+      <section class="book-stage" aria-labelledby="book-title">
+        <h1 id="book-title" class="visually-hidden">The Translator Between Panels</h1>
+        <div id="book" class="book"></div>
+      </section>
+
+      <nav class="reader-controls" aria-label="Book navigation">
+        <button id="previous-page" class="turn-button" type="button" aria-label="Go to the previous manga page">
+          <span aria-hidden="true">→</span> Back
+        </button>
+        <p id="page-status" class="page-status" aria-live="polite">Front cover</p>
+        <button id="next-page" class="turn-button turn-button--primary" type="button" aria-label="Turn to the next manga page">
+          Next <span aria-hidden="true">←</span>
+        </button>
+      </nav>
+
+      <p class="prototype-note">All professional details are placeholders awaiting approved résumé content.</p>
+    </main>
+
+    <section id="text-resume" class="text-resume" aria-labelledby="text-resume-title">
+      <div class="text-resume__inner">
+        <p class="eyebrow">Accessible text edition</p>
+        <h2 id="text-resume-title">[Translator name] — Manga translator</h2>
+        <p>
+          This prototype intentionally contains no invented credentials. Replace every bracketed item with approved professional information.
+        </p>
+        <dl class="resume-facts">
+          <div><dt>Language pairs</dt><dd>[Source language] → [Target language]</dd></div>
+          <div><dt>Specialties</dt><dd>[Genres, formats, or subject areas]</dd></div>
+          <div><dt>Experience</dt><dd>[Verified experience summary]</dd></div>
+          <div><dt>Tools</dt><dd>[CAT, QA, lettering, or collaboration tools]</dd></div>
+        </dl>
+        <h3>Working method</h3>
+        <ol>
+          <li>Read for voice, context, and visual timing.</li>
+          <li>Research cultural references and terminology.</li>
+          <li>Translate for character, space, and natural dialogue.</li>
+          <li>Review in-panel and complete a final consistency pass.</li>
+        </ol>
+        <h3>Portfolio</h3>
+        <p>[Add approved publications, samples, or password-protected case studies.]</p>
+        <h3>Contact</h3>
+        <p><a href="mailto:translator@example.com">translator@example.com</a> · <a href="#">[Professional profile]</a></p>
+        <a class="return-link" href="#book-title">Return to the manga</a>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
