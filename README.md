@@ -1,8 +1,8 @@
 # Chii Reader
 
-An initial prototype for an interactive manga résumé. It uses HTML-native manga pages inside [Grabfold](https://github.com/javocsoft/grabfold), with a right-bound book, responsive spreads, touch and keyboard controls, and a static GitHub Pages build.
+An interactive manga résumé for Gemma, known online as @Chii_reader. It uses HTML-native manga pages inside [Grabfold](https://github.com/javocsoft/grabfold), with a right-bound book, responsive spreads, touch and keyboard controls, and a static GitHub Pages build.
 
-All personal and professional information is intentionally placeholder content. Do not publish the prototype as a real résumé until the bracketed fields and example contact links are replaced with approved information.
+Bracketed professional information must be replaced with Gemma’s approved details before presenting the résumé as complete.
 
 ## Run locally
 
@@ -42,7 +42,7 @@ The deployment job publishes only the generated `dist/` directory.
 - Select **Enlarge** when dialogue needs magnification.
 - Follow **Text version** for an accessible linear résumé.
 
-## Prototype structure
+## Project structure
 
 ```text
 src/main.ts                  Page content and Grabfold setup

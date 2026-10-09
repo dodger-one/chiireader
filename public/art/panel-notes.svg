@@ -9,5 +9,5 @@
     <ellipse cx="590" cy="225" rx="75" ry="105" fill="#fff" stroke="#111" stroke-width="9"/><path d="M525 205c20-120 140-100 145 15-55-60-95-20-145-15z"/>
     <path d="M160 580h250m-240 45h330m-320 45h210m-220 150h430m-420 45h355" stroke="#111" stroke-width="10"/>
     <g fill="#fff" stroke="#111" stroke-width="8"><ellipse cx="355" cy="170" rx="90" ry="48"/><ellipse cx="585" cy="410" rx="85" ry="48"/><ellipse cx="545" cy="745" rx="120" ry="70"/></g>
-  </g><path d="M25 170l120 35M40 210l90 24M625 950l130-80M650 990l110-55" stroke="#b52025" stroke-width="12"/>
+  </g><path d="M25 170l120 35M40 210l90 24M625 950l130-80M650 990l110-55" stroke="#ee9b86" stroke-width="12"/>
 </svg>

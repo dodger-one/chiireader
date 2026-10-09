@@ -7,11 +7,12 @@ const asset = (name: string) => new URL(`${import.meta.env.BASE_URL}art/${name}`
 const pageTemplates = [
   () => `
     <article class="manga-page page-intro" aria-label="Page 1: Introduction">
-      <div class="panel panel--hero art-panel" role="img" aria-label="A translator working late at a desk, surrounded by manga pages" style="--art: url('${asset("translator-desk.svg")}')">
-        <div class="narration top-right">Between two languages…</div>
+      <figure class="panel panel--hero feed-hero">
+        <img src="https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=small" srcset="https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=small 493w, https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=large 847w" sizes="(min-width: 760px) 42vw, 88vw" alt="A Spanish-lettered manga excerpt shared by @Chii_reader: two schoolgirls react to an unexpected close encounter" referrerpolicy="no-referrer" />
+        <figcaption class="narration top-right">Between two languages…</figcaption>
         <div class="sfx sfx--vertical" aria-hidden="true">カリ</div>
         <p class="bubble bubble--normal bubble--intro">Every line has a voice.<br />My job is to let it travel.</p>
-      </div>
+      </figure>
       <div class="panel panel--strip">
         <div class="speed-lines" aria-hidden="true"></div>
         <div class="narration">Meet <strong>Gemma</strong></div>
@@ -82,15 +83,15 @@ const pageTemplates = [
       <span class="folio">5</span>
     </article>`,
   () => `
-    <article class="manga-page page-sample" aria-label="Page 6: From Chii reader's public feed">
-      <figure class="panel sample-scene">
-        <img src="https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=small" srcset="https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=small 493w, https://pbs.twimg.com/media/HUImchgXkAAXlpI?format=webp&amp;name=large 847w" sizes="(min-width: 760px) 42vw, 88vw" alt="A Spanish-lettered manga excerpt shared by @Chii_reader: two schoolgirls react to an unexpected close encounter" loading="lazy" referrerpolicy="no-referrer" />
-        <figcaption class="narration">FROM @CHII_READER’S PUBLIC FEED</figcaption>
-      </figure>
+    <article class="manga-page page-sample" aria-label="Page 6: Portfolio and public feed">
+      <div class="panel sample-scene art-panel" role="img" aria-label="A commuter looks through a train window, ready for the next chapter" style="--art: url('${asset("train-scene.svg")}')">
+        <div class="narration">THE NEXT CHAPTER</div>
+        <p class="bubble bubble--normal sample-source">More pages are on the way.</p>
+      </div>
       <div class="panel sample-result">
-        <span class="panel-kicker">WHY MANGA NEEDS A HUMAN VOICE</span>
-        <blockquote>Timing. Tone. Space. Character.</blockquote>
-        <p>A single bubble has to carry them all. This public-feed image illustrates the medium; no publication credit is claimed.</p>
+        <span class="panel-kicker">PORTFOLIO</span>
+        <blockquote>Selected work, thoughtfully presented.</blockquote>
+        <p>Approved credits and case studies will live here. Until then, read alongside Gemma on her public feed.</p>
       </div>
       <div class="panel sample-link">
         <strong>READ WITH CHII</strong>
@@ -100,7 +101,7 @@ const pageTemplates = [
     </article>`,
 ];
 
-function coverTemplate(side: "front" | "back", face: "inside" | "outside") {
+function coverTemplate(side: "front" | "back", face: "inside" | "outside", mobile: boolean) {
   if (side === "front" && face === "outside") {
     return `
       <article class="manga-page cover cover--front" aria-label="Front cover">
@@ -124,6 +125,11 @@ function coverTemplate(side: "front" | "back", face: "inside" | "outside") {
       </article>`;
   }
 
+  // In a right-bound Japanese book the first readable page belongs on the
+  // right. Grabfold otherwise places sheet 0 on the left after opening a hard
+  // cover, so desktop uses the inside front cover as page one.
+  if (!mobile && side === "front" && face === "inside") return pageTemplates[0]();
+
   return `
     <article class="manga-page inside-cover" aria-label="${side === "front" ? "Inside front cover" : "Inside back cover"}">
       <div class="inside-pattern" aria-hidden="true"></div>
@@ -133,13 +139,13 @@ function coverTemplate(side: "front" | "back", face: "inside" | "outside") {
 }
 
 function renderPage(page: PageRef, mobile: boolean): string {
-  if (page.kind === "cover") return coverTemplate(page.side, page.face);
+  if (page.kind === "cover") return coverTemplate(page.side, page.face, mobile);
   if (mobile && page.kind === "back") {
     return `<article class="manga-page page-verso" aria-hidden="true"><div class="inside-pattern"></div></article>`;
   }
   if (mobile) return pageTemplates[page.sheet]?.() ?? `<article class="manga-page" aria-label="Blank page"></article>`;
-  const index = page.sheet * 2 + (page.kind === "back" ? 1 : 0);
-  return pageTemplates[index]?.() ?? `<article class="manga-page" aria-label="Blank page"></article>`;
+  const index = page.sheet * 2 + (page.kind === "back" ? 1 : 0) + 1;
+  return pageTemplates[index]?.() ?? `<article class="manga-page page-verso" aria-hidden="true"><div class="inside-pattern"></div></article>`;
 }
 
 function requiredElement<T extends Element>(selector: string): T {
